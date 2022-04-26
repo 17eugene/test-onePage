@@ -1,0 +1,33 @@
+@import "../Variables//Variables.scss";
+
+.button {
+    padding: 0;
+    border: none;
+    border-radius: 80px;
+    width: 100px;
+    height: 34px;
+    background-color: $primaryButtonColor;
+    font-size: $regularFontSize;
+    font-family: $font;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:first-child {
+        margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: rgb(175, 193, 44);
+    }
+
+    &:disabled {
+        background-color: #B4B4B4;
+        color: #fff;
+    }
+}
+
+.hero-button {
+    @extend .button;
+    width: 120px;
+}

@@ -1,0 +1,96 @@
+@import "../../styles/Variables/Variables.scss";
+
+// .upload-file__input {
+//     display: none;
+// }
+
+// .upload-file__wrapper {
+//     display: flex;
+//     margin-bottom: 50px;
+// }
+
+// .upload-file__label {
+//     min-width: 83px;
+//     height: 54px;
+//     display: block;
+//     background-color: transparent;
+//     border: 1px solid $blackFontColor;
+//     border-bottom-left-radius: 4px;
+//     border-top-left-radius: 4px;
+// }
+
+// .upload-file__text {
+//     color: $blackFontColor;
+//     line-height: 26px;
+//     font-size: $regularFontSize;
+//     display: inline-block;
+// }
+
+.upload-file__wrapper {
+    display: flex;
+    margin-bottom: 50px;
+
+    & .form-input {
+        display: none;
+    }
+
+    & .label-input {
+        width: 83px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid $blackFontColor;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    & .label-radio-text {
+        color: $blackFontColor;
+        line-height: 26px;
+        font-size: $regularFontSize;
+        display: inline-block;
+    }
+}
+
+
+.file-name-container {
+    box-sizing: border-box;
+    width: 245px;
+    height: 54px;
+    border: 1px solid $borderColor;
+    display: block;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .file-name-container {
+        width: 297px;
+    }
+}
+
+.upload-file__placeholder {
+    text-align: left;
+    font-size: $regularFontSize;
+    line-height: 26px;
+    color: $placeholderColor;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &-filled {
+        @extend .upload-file__placeholder;
+        color: $blackFontColor;
+    }
+}
+
+
+

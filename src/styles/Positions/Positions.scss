@@ -1,0 +1,24 @@
+@import "../../styles/Variables/Variables.scss";
+
+.positions {
+    margin-top: 25px;
+    margin-bottom: 47px;
+
+    &__title {
+        text-align: left;
+        font-weight: 400;
+        font-size: $regularFontSize;
+        margin: 0;
+        margin-bottom: 11px;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}

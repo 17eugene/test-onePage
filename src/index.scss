@@ -1,0 +1,14 @@
+@import "./styles/Variables/Variables.scss";
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bgColor;
+}
+
+code {
+  font-family: $font;
+}

@@ -1,0 +1,87 @@
+@import "../Variables/Variables.scss";
+
+.form-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 54px;
+    border: 1px solid $borderColor;
+    color: $placeholderColor;
+    font-size: $regularFontSize;
+    font-family: $font;
+    line-height: 26px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    border-radius: 4px;
+    margin-top: 50px;
+    background-color: $bgColor;
+}
+
+.label-input {
+    display: inline-block;
+    color: $placeholderColor;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: $font;
+    width: 100%;
+    text-align: left;
+
+    &:last-child {
+        margin-bottom: 25px;
+    }
+
+    &-text {
+        display: inline-block;
+        padding-left: 15px;
+        margin-top: 4px;
+    }
+}
+
+.label-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-radio {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+    & + .label-radio-text::before {
+        content: '';
+        box-sizing: border-box;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $borderColor;
+        border-radius: 50%;
+        margin-right: 12px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    &:not(:disabled):not(:checked) + .label-radio-text:hover::before {
+        border: 1px solid #00BDD3;
+    }
+
+    &:not(:disabled):active + .label-radio-text::before {
+        background-color: #b3d7ff;
+        border-color: #b3d7ff;
+    }
+
+    &:checked + .label-radio-text::before {
+        box-sizing: border-box;
+        border-color: #00BDD3;
+        background-image: url(../../images/checked.svg);
+    }
+}
+
+.label-radio-text {
+    font-size: $regularFontSize;
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,0 +1,116 @@
+@import "../../styles/Variables/Variables.scss";
+
+%title {
+  font-size: $titleFontSize;
+  font-weight: 400;
+  width: 328px;
+  margin: 0 auto;
+  margin-bottom: 21px;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  %title {
+    width: 380px;
+  }
+}
+
+.hero {
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 71px;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../images/bg-img.jpg);
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    @extend %title;
+    color: $whiteFontColor;
+  }
+
+  &__text {
+    font-size: $regularFontSize;
+    color: $whiteFontColor;
+    padding-bottom: 32px;
+    width: 328px;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../images/bg-img.jpg);
+
+    &__text {
+      width: 380px;
+    }
+  }
+
+  .users__title,
+  .registration__title {
+    width: 704px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 163px;
+    padding-bottom: 163px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../images/bg-img.jpg);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .hero {
+    padding-top: 163px;
+    padding-bottom: 163px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../images/bg-img.jpg);
+  }
+}
+
+.users {
+  margin-top: 140px;
+  margin-bottom: 140px;
+  text-align: center;
+
+  &__title {
+    @extend %title;
+    color: $blackFontColor;
+    margin-bottom: 50px;
+  }
+}
+
+.registration {
+  text-align: center;
+  margin-bottom: 100px;
+
+  &__title {
+    @extend %title;
+    color: $blackFontColor;
+    margin-bottom: 0;
+  }
+}
+
+.error-message {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  padding-left: 8px;
+  padding-top: 4px;
+  color: rgba(57, 10, 10, 0.8);
+  position: absolute;
+}
+
+.success {
+    margin-top: 50px;
+}
