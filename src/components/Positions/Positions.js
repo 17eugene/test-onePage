@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Input from "../Input/Input";
 import "../../styles/Positions/Positions.scss";
 
-const Positions = ({ register }) => {
+const Positions = ({ register, errors }) => {
   const [positionList, setPositionList] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,7 @@ const Positions = ({ register }) => {
           </li>
         ))}
       </ul>
+      <div>{errors?.position && <p className="error-message">{errors?.position?.message}</p>}</div>
     </div>
   );
 };

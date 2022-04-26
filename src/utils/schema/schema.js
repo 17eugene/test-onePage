@@ -22,4 +22,7 @@ export const schema = yup.object().shape({
       /^[+]{0,1}380([0-9]{9})$/,
       "Enter the phone number in the required format!"
     ),
+
+    position: yup.number().required("Choose your position!"),
+
 });

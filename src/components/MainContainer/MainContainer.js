@@ -137,7 +137,7 @@ const MainContainer = () => {
               )}
             </div>
 
-            <Positions register={register} />
+            <Positions errors={errors} register={register} />
 
             <div className="upload-file__wrapper">
               <Input
